@@ -10,13 +10,23 @@
     <h1>Ini adalah halaman buku</h1>
     <p>Ini adalah halaman buku yang menampilkan daftar buku yang tersedia.</p>
 
+
     @foreach ($books as $item)
+      <ul>
+        <li><strong>Judul:</strong> {{ $item->title }}</li>
+        <li><strong>Deskripsi:</strong> {{ $item->description }}</li>
+        <li><strong>Harga:</strong> Rp {{ $item->price }}</li>
+        <li><strong>Stok:</strong> {{ $item->stock }}</li>
+      </ul>  
+    @endforeach
+
+    {{-- @foreach ($books as $item)
       <ul>
         <li>{{ $item['title'] }}</li>
         <li>{{ $item['description'] }}</li>
         <li>{{ $item['price'] }}</li>
         <li>{{ $item['stock'] }}</li>
       </ul>  
-    @endforeach
+    @endforeach --}}
 </body>
 </html>

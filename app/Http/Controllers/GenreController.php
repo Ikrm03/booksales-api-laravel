@@ -8,8 +8,9 @@ use Illuminate\Http\Request;
 class GenreController extends Controller
 {
     public function index() {
+        $genres = Genre::all();
         $data = new Genre();
-        $genres = $data->getGenres();
+        // $genres = $data->getGenres();
 
         return view('genres', ['genres' => $genres]);
     }

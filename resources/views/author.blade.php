@@ -8,10 +8,18 @@
 
     @foreach ($authors as $item)
         <ul>
+            <li><strong>Nama:</strong> {{ $item->name }}</li>
+            <li><strong>Bio:</strong> {{ $item->bio }}</li>
+        </ul>
+        <hr>
+    @endforeach
+
+    {{-- @foreach ($authors as $item)
+        <ul>
             <li><strong>Nama:</strong> {{ $item['name'] }}</li>
             <li><strong>Bio:</strong> {{ $item['bio'] }}</li>
         </ul>
         <hr>
-    @endforeach
+    @endforeach --}}
 </body>
 </html>
