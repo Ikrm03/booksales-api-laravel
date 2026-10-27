@@ -12,6 +12,10 @@ class BookController extends Controller
         $data = new Book();
         // $books = $data->getBooks();
 
-        return view('books', ['books' => $books]);
+        return response()->json([
+            "success" => true,
+            "message" => "Get All Books Resource",
+            "data" => $books
+        ], 200);
     }
 }

@@ -12,6 +12,10 @@ class GenreController extends Controller
         $data = new Genre();
         // $genres = $data->getGenres();
 
-        return view('genres', ['genres' => $genres]);
+        return response()->json([
+            "success" => true,
+            "message" => "Get all resources",
+            "data" => $genres
+        ], 200);
     }
 }
